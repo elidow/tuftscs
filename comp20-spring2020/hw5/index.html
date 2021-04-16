@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href= "style.css" />
+</head>
+
+<body bgcolor= "#ffffff"; >
+	<h1>Joe's Hotdog Stand</h1>
+    <h2>Cheapest dogs around</h2>
+    <h3> Order Here </h3>
+
+    <p>
+       *If you don't want to order an item, enter a "0" in the box <br>
+       *If you calculate your order and want to try again, refresh the page <br>
+    </p>
+
+    <p>
+        Hotdogs: $3.25 <br>
+        French Fries: $2.00 <br>
+        Drinks: $1.50 <br>
+    </p>
+
+    <form id="frm1" action="/action_page.php">
+        Number of Hotdogs: <input type="text" name="hotdogs"><br>
+        Number of Fries: <input type="text" name="fries"><br>
+        Number of Drinks <input type="text" name="drinks"><br><br>
+        <input type="button" onclick="calc_total()" value="Calculate Order">
+    </form>
+
+    <p id="orders"></p>
+    <p id="hotdogs"></p>
+    <p id="fries"></p>
+    <p id="drinks"></p>
+    <p id="subtotal"></p>
+    <p id="discount"></p>
+    <p id="tax"></p>
+    <p id="total"></p>
+
+    <script>
+        var hotdog_price = 3.25;
+        var fries_price = 2.00;
+        var drink_price = 1.50;
+
+        function calc_total() {
+            var hotdogs = parseInt(document.getElementsByName("hotdogs")[0].value);
+            var fries = parseInt(document.getElementsByName("fries")[0].value);
+            var drinks = parseInt(document.getElementsByName("drinks")[0].value);
+
+            var subtotal = calculate_subtotal(hotdogs, fries, drinks).toFixed(2);
+
+            var post_discount = subtotal;
+            if (post_discount > 20.00) {
+                post_discount *= .9;
+            }
+
+            if((parseInt(subtotal * 100) % 5) == 0 
+                && (parseInt(subtotal * 100) % 10) != 0) {
+                if(subtotal > 20) {
+                    post_discount -= .005;
+                }
+            }
+
+            tax = (Math.round(post_discount * 0.0625 * 100) / 100).toFixed(2);
+
+            total = (Math.round(post_discount * 1.0625 * 100) / 100).toFixed(2);
+
+            print_order(hotdogs, fries, drinks, subtotal,
+                        (subtotal - post_discount).toFixed(2), tax, total);
+
+        }
+
+        function calculate_subtotal(hotdogs, fries, drinks) {
+            var hotdog_cost = hotdogs * hotdog_price;
+            var fries_cost = fries * fries_price;
+            var drink_cost = drinks * drink_price;
+            return Math.round((hotdog_cost + fries_cost + drink_cost) * 100) / 100;
+        }
+
+        function print_order(hotdogs, fries, drinks, subtotal, discount,
+                            tax, total) {
+
+            document.getElementById("orders").innerHTML =
+            "Items Ordered:\n";
+           // var items = "";
+            
+            if(hotdogs > 0){
+                document.getElementById("hotdogs").innerHTML = "Hotdogs: "
+                    + print_item(hotdogs);
+            }
+
+            if(fries > 0){
+                document.getElementById("fries").innerHTML = "Fries: "
+                    + print_item(fries);
+            }
+
+            if(drinks > 0){
+                document.getElementById("drinks").innerHTML = "Drinks:   "
+                    + print_item(drinks);
+            }
+            //document.write(items);
+
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" 
+                + subtotal + "\n";
+
+            document.getElementById("discount").innerHTML = "Discount: " 
+                + print_discount(discount);
+
+            document.getElementById("tax").innerHTML = "\nTax:  $"
+                + tax;
+
+            document.getElementById("total").innerHTML =  "\nTotal: $"
+                + total;
+
+        }
+
+        function print_item(amount){
+            var orders = amount + " order";
+            if(amount > 1)
+                orders += "s";
+            orders += "\n";
+            return orders;
+        }
+
+        function print_discount(discount){
+            if(discount > 0)
+                totals = "-$" + discount;
+            else
+                totals = "none"
+            return totals;
+        }
+
+    </script>
+
+	<footer>
+		Industry: Hot Dog Stand <br>
+		Owner: Joe <br>
+		Website Designer: Eli Dow <br>
+		Location: 100 Boston Ave, Boston, MA
+    </footer>
+    
+
+
+</body>
+</html>
