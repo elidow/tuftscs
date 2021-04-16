@@ -1,0 +1,39 @@
+h1 {
+    font-size: 50 px;
+    text-align: center;
+    color: #550f0f;
+}
+
+p {
+    font-size: 35 px;
+    font-family: arial;
+    display: table-cell;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0DAEFF;
+    border-style: solid;
+    border-color: #000000;
+ }
+ 
+ li a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 40px;
+    font-size: 20px;
+    text-decoration: none;
+ }
+ 
+ li a:hover {
+   background-color: #111111;
+ }
+
+form {
+    font-size: 40 px;
+}

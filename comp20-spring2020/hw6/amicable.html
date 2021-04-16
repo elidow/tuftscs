@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mass Lottery & Amicable Numbers</title>
+	<link rel="stylesheet" type="text/css" href= "style.css" />
+</head>
+
+<body bgcolor= "#ffffff";>
+	<h1>Are My Numbers Amicable?</h1>
+
+	<ul>
+        <li><a href="index.html">Lottery</a></li>
+        <li><a href="amicable.html">Amicable</a></li>
+    </ul>
+
+    <form id="frm1" action="/action_page.php">
+        Number 1: <input type="text" name="num1"><br>
+        Number 2: <input type="text" name="num2"><br>
+        <input type="button" onclick="read_nums()" value="Calculate">
+    </form>
+
+    <p id="number_statement"></p>
+    <p id="number1"></p>
+    <p id="number2"></p><br>
+    <p id="factors1"></p><br>
+    <p id="factors2"></p><br>
+
+    <p id="amicable_statement"></p>
+
+    <script>
+
+        /* read_nums
+         * Does: Read numbers and calls functions to determine if amicable
+         */
+        function read_nums() {
+
+            var num1 = document.getElementsByName("num1")[0].value;
+            var num2 = document.getElementsByName("num2")[0].value;
+
+            document.getElementById("number_statement").innerHTML = 
+                "Numbers: ";
+            document.getElementById("number1").innerHTML = num1;
+            document.getElementById("number2").innerHTML = num2;
+
+            /* 
+            Test Code for isFactor:
+
+            isFactor(12,2) (Output = True)
+            isFactor(9,1) (Output = True)
+            isFactor(31,2) (Ouput = False)
+            isFactor(54, 40) (Output = False)
+            isFactor(66, 66) (Output = False)
+            isFactor(3, 4) (Output = False)
+            isFactor(4, 0) (Output = False)
+
+            Test Code for showFactors:
+
+            var num1 = 6
+            var num2 = 7
+            var array1 = [1, 2, 3] (factors of 6)
+            var array2 = [1] (factors of 7)
+            showFactor(array1, num1, 1) (Output = 1, 2, 3)
+            showFactor(array2, num2, 2) (Output = 1)
+            */
+
+            var factors1 = [];
+            var factors2 = [];
+            var amicable = false;
+            factors1 = getFactors(num1);
+            factors2 = getFactors(num2);
+            showFactors(factors1, num1, 1);
+            showFactors(factors2, num2, 2);
+
+            if((addFactors(factors1) == num2) && (addFactors(factors2) == num1))
+                amicable = true;
+            
+            if((amicable == true) && (num1 != num2))
+                document.getElementById("amicable_statement").innerHTML = 
+                    "These numbers are amicable!";
+            else
+                document.getElementById("amicable_statement").innerHTML = 
+                    "These numbers are not amicable :(";
+        }
+
+        /* isFactor
+         * Does: returns true if second number is factor of the first,
+         *       returns false otherwise
+         */
+        function isFactor(num1, test1) {
+            if(num1 % test1 == 0)
+                return true;
+            return false;
+        }
+
+        /* getFactors
+         * Does: returns an array of all the factors of a numbr (not itself)
+         */
+        function getFactors(num) {
+            var factor_arr = [];
+            for(var i = 1; i < (parseInt(num / 2) + 1); i++) {
+                if(isFactor(num, i))
+                    factor_arr.push(i);
+            }
+            return factor_arr;
+        }
+
+        /* showFactors
+         * Does: Takes in array of factors, the number, and type (for id) 
+         *       Prints factors of number
+         */
+        function showFactors(factor_arr, number, type) {
+            var factors = "";
+            for(var i = 0; i < factor_arr.length; i++) {
+                factors += factor_arr[i]; 
+                if(i != factor_arr.length - 1)
+                    factors += ", ";
+            }
+            document.getElementById("factors" + type).innerHTML = 
+                "Factors of " + number + ": " + factors;
+        }
+        /* addFactors
+         * Does: adds factors of a number/adds up elements in array, returns sum
+         */
+        function addFactors(factor_arr) {
+            var sum = 0;
+            for(var i = 0; i < factor_arr.length; i++) {
+                sum += factor_arr[i];
+            }
+
+            return sum;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mass Lottery & Amicable Numbers</title>
+	<link rel="stylesheet" type="text/css" href= "style.css" />
+</head>
+
+<body bgcolor= "#ffffff"; onload = "get_random()" >
+	<h1>Mass Lottery "Lucky for Life" Game</h1>
+
+	<ul>
+        <li><a class="active" href="#home">Lottery</a></li>
+        <li><a href="amicable.html">Amicable</a></li>
+    </ul>
+
+
+    <h3> Numbers Today </h3>
+
+    <p id="number0"></p>
+    <p id="number1"></p>
+    <p id="number2"></p>
+    <p id="number3"></p>
+    <p id="number4"></p>
+
+    <h3> Luck Number Today </h3>
+
+    <p id="luckynum"></p>
+
+    <h3> Numbers Today Sorted </h3>
+
+    <p id="number0sorted"></p>
+    <p id="number1sorted"></p>
+    <p id="number2sorted"></p>
+    <p id="number3sorted"></p>
+    <p id="number4sorted"></p>
+
+    <h3> Luck Number Today (Again) </h3>
+
+    <p id="luckynum2"></p>
+
+    <h3> How to Play </h3>
+
+    <p display="none">
+        Enter 5 numbers from 1 to 48 with spaces in between each number. <br>
+        Then enter a number from 1 to 18 for the Lucky Ball. <br>
+        Good Luck!!
+    </p>
+
+    <form id="frm2" action="/action_page.php">
+        5 numbers: <input type="text" name="numbers_string"><br>
+        Lucky Ball: <input type="text" name="lucky_ball"><br>
+        <input type="button" onclick="get_results()" value="Let's Play">
+    </form>
+
+    <p id="match_statement"></p>
+    <p id="prize_statement"></p>
+
+    <script>
+
+        var nums = [0, 0, 0, 0, 0];
+        var lucky_b = 0;
+        var picked = [0, 0, 0, 0, 0];
+
+        /* get_random
+         * Does: retrieves the random numbers and lucky ball and displays them
+         *       also sorts the numbersa and displays the numbers again
+         */
+        function get_random() {
+
+            var numbers = [];
+            var unique = 0;
+            var temp = 0;
+
+            /* getting 6 random numbers */
+            for(var i = 0; i < 5; i++) {
+                if(numbers.length != 0) {
+                    while(unique < numbers.length) {
+                        unique = 0;
+                        temp = parseInt(Math.random() * 48) + 1;
+                        for(var i = 0; i < numbers.length; i++) {
+                            if(temp != numbers[i])
+                                unique++;
+                        }
+                    }
+                }
+                else {
+                    temp = parseInt(Math.random() * 48) + 1;
+                }
+                numbers.push(temp);
+
+            }
+            
+            unique = 0;
+            while(unique == 0) {
+                lucky_b = parseInt(Math.random() * 18) + 1;
+                unique = 1;
+                for(var i = 0; i < 5; i++) {
+                    if(lucky_b == numbers[i])
+                        unique = 0;
+                }
+            }
+
+            nums = numbers;
+
+            /* outputs the numbers unsorted and sorted */
+            for(var i = 0; i < 5; i++)
+                document.getElementById("number" + i).innerHTML = numbers[i];
+
+            document.getElementById("luckynum").innerHTML = lucky_b;
+
+            var sorted = numbers.sort (function(a,b) {return a - b});
+
+            for(var i = 0; i < 5; i++)
+                document.getElementById("number" + i + "sorted").innerHTML = numbers[i];
+
+            document.getElementById("luckynum2").innerHTML = lucky_b;
+        }
+
+
+        /* get_results
+         * Does: Reads inputted numbers and lucky ball. It then
+         *       parses the inputed string of numbers and calls findMatch
+         *       to see if there is a match. Finally, calls calcPayout to find
+         *       prize result.
+         */
+        function get_results()
+        {
+            var numstring = document.getElementsByName("numbers_string")[0].value;
+            var luckyball = document.getElementsByName("lucky_ball")[0].value;
+            var s_length = numstring.length;
+            var curr = 0;
+            var substr = "";
+            var total = 0;
+            var plus_lb = "";
+            var entry = 0;
+
+            /* parsing string of numbers */
+            while(curr < s_length) {
+                if((numstring[curr] == " ") || (curr == s_length - 1)) {
+                    if(curr == s_length - 1) {
+                        substr += numstring[curr];
+                    }
+                    entry = parseInt(substr);
+                    total += findMatch(entry, picked);
+                    substr = "";
+                }
+                else
+                    substr += numstring[curr];
+
+                curr++;
+                entry = 0;
+            }
+
+            if(parseInt(luckyball) == lucky_b)
+                plus_lb += " + Lucky Ball";
+
+
+            /* Getting payout and outputting it */
+            var results = total + plus_lb;
+            var prize = calcPayout(results);
+
+            document.getElementById("match_statement").innerHTML = "Match: "
+                + results;
+
+            document.getElementById("prize_statement").innerHTML = "Prize: "
+                + prize;
+        }
+
+
+        /* findMatch
+         * Does: compares an inputted number to the random numbers and returns
+         *       true if there is a match. Accounts for repeats.
+         */
+        function findMatch(entry, picked) {
+
+            for(var i = 0; i < 5; i++) {
+                if((entry == nums[i]) && (picked[i] == 0)) {
+                    picked[i] = 1;
+                    return 1;
+                }
+            }
+
+            return 0;
+        }
+
+
+        /* calcPayout
+         * Does: Based on a string describing results, returns a string of
+         *       the payout.
+         */
+        function calcPayout(results) {
+
+            if(results == "0 + Lucky Ball")
+                return "$4";
+            else if(results == "1 + Lucky Ball")
+                return "$6";
+            else if(results == "2")
+                return "$3";
+            else if(results == "2 + Lucky Ball")
+                return "$25";
+            else if(results == "3")
+                return "$20";
+            else if(results == "3 + Lucky Ball")
+                return "$150";
+            else if(results == "4")
+                return "$200";
+            else if(results == "4 + Lucky Ball")
+                return "$5,000";
+            else if(results == "5")
+                return "$25,000 a YEAR for LIFE!";
+            else if(results == "5 + Lucky Ball")
+                return "$7,000 a WEEK for LIFE!";
+            else
+                return "No prize. Better luck next time :(";
+        }
+
+    </script>
+
+</body>
+</html>
