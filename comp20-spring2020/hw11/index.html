@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Companies and Stock Tickers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="papaparse.min.js"></script>
+    <style>
+        p {
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+
+<body bgcolor= "#ffffff";>
+	<h1>Companies and Tickers</h1>
+
+
+    <p display="none">
+        Enter to look at companies or tickers
+    </p>
+
+    <form id="frm1" method="get" action="http://localhost:8080">
+        <input type="radio" id="company" name="type" value="company">
+        <label for="company">Company</label><br>
+        <input type="radio" id="ticker" name="type" value="ticker">
+        <label for="ticker">Ticker</label><br>
+        <input type="text" name="input">
+        <input type="submit" value="Find Record">
+    </form>
+
+</body>
+</html>
