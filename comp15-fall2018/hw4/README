@@ -1,0 +1,62 @@
+
+HW4
+Eli Dow
+
+
+Acknowledgements: TAs Supriya, Casey, and Nick
+
+
+Purpose: The purpose of hw4 is to implement a binary search tree. A binary
+		 search tree has the invariant that all nodes to the left of a node are
+		 smaller in value, and all nodes to the right are larger in value.
+		 We are also implementing a copy constuctor and an assignment overload
+		 for the binary search tree as well.
+
+Files:
+
+Name: main.cpp
+Description: This file is the main driver that tests different functions and
+			 creates copies. Tests parts of the program one at a
+			 time(unit-testing).
+
+Name: BinarySearchTree.h
+Description: BinarySearchTree.h contains declarations and descriptions of all
+			 the Binary search tree functions and attributes, including any 
+			 helper functions.
+
+Name: BinarySearchTree.cpp
+Description: BinarySearchTree.cpp contains all of the functions of
+			 BinarySearchTree that were implemented. The BST is constructed by
+			 a node, that has data, with a left and right pointer. Also, I 
+			 created a copy constuctor and an assignement overload to make deep
+			 copies of BST.
+
+Name: pretty_print.cpp
+Description: pretty_print.cpp is called from a function in BinarySearchTree.cpp
+			 and it prints the current BST is a "pretty" format.
+
+
+
+How to compile and run your program:
+
+Compiled: clang++ -g -Wall -Wextra main.cpp BinarySearchTree.cpp pretty_print.cpp
+ -o main
+
+Run: ./main
+
+
+Data Structures and Algorithms:
+
+	I used a LinkedList with two pointers for this assignment. LinkedLists are
+typical for binary search trees and trees in general because they split info
+into nodes that are accessed by pointers. LL made it easy to compare the data
+of the node, insert, and remove compared to an ArrayList.
+
+
+Details and Explanation of Testing:
+
+	I tested my code by using the testing.cpp driver. In that file,
+I would output every function of BinarySearchTree.cpp individually
+(sometimes in groups) to make sure it was working, similar to how it did so in
+main.cpp. In a lot of functions of BinarySearchTree, I had to check that my 
+implements for the BST were correct.
