@@ -1,0 +1,158 @@
+
+Proj1
+Eli Dow
+
+Overview:
+
+
+Acknowledgements: TAs August and Tanya
+
+
+Purpose: The purpose of Proj1 is to implement a structure that organizes
+        DNA sequences in a tree like structure. These sequences not only
+        must be inserted into and removed from the structure, but certain
+        requests should retrieve information.
+
+
+Files:
+
+Name: main.cpp
+Description:    This file is the main driver. It reads the requests from the query
+            file and uses a Trie object to execute those commands. It returns
+            any outputs to the output file given.
+
+Name: Trie.h
+Description:    Trie.h contains declarations and descriptions of all
+             the trie functions and attributes, including any 
+             helper functions. It also includes a node struct.
+
+Name: Trie.cpp
+Description:    Trie.cpp contains all of the functions of
+             Trie that were implemented. The Trie is constructed by
+             a node, that has a character, with four pointers and a bool.
+             Here is the implementations of the main functions along with 
+             helpers. I also created a constructor and a destuctor.
+
+Name: Makefile
+Description:    Makefile for program.
+
+
+How to compile and run the program:
+
+Compiled: make main
+Run: ./main [query file] [output location]
+
+
+Data Structures and Algorithms:
+
+    I used a Trie to implement this project. A trie is a good structure for
+organizing words by breaking up the character to different nodes. An expanded
+explanation and algorithms for each major function is quesion 1 of specifics.
+
+Details and Explanation of Testing:
+
+    I tested my code by using a testing.cpp file. I also used print and 
+contains functions in Trie. In the specifics section, I go into more depth 
+about both.
+
+
+
+Specifics:
+
+
+(1) What data structures will you be using for this project, and why
+were those choices made? If using more than one data structure, how will they
+interact? If you are modifying a known data structure, what changes will you
+ be making and why?
+
+I will be using a Trie to implement this project. Tries are tree-like
+structures because they have a linked set of nodes, where each node contains an
+array of child pointers. A trie is a very effective data structure for this
+project because we can organize words or sequences by splitting up the
+characters into separate nodes. Given a sequence, each letter is a parent to 
+the letter that comes after it, and all of the descendants of a node
+have a common prefix. 
+
+Each node will have information(string of characters), typical of any trie.
+One important feature to this data structure is it would have a common root so
+that when a sequence is inserted, it will be automatically placed in one of the
+root’s children. Beside its info and a common root, each node will have four 
+pointers because each one represents a possible character of the 
+sequence: A, C, G, and T. It is contained in an array so it is easy to iterate
+through the four. If the node is pointing to NULL for a specific letter, then 
+there is nothing there. Also, every node has a EndofWord boolean value that is 
+true if it marks the end of a word that was inserted.
+
+
+(2) How do you plan on solving insert, query and remove requests?
+
+insert:
+    Insert passes a string(initially full sequence) and a node(initially root).
+It recursively traverses through the tree until the string is empty. If the root
+is NULL or the letter of the sequence being inserted is NULL, it creates the 
+space. The function's base case is when the sequence is empty(no more letters).
+For question marks, it recursively calls the funciton four times.
+
+query:
+    Query passes a node, a string(sequence), and a prefix(starts as null).
+It recursively traverses the trie until it reaches a point where the prefix is
+different. At that point it returns the closest match, and that is calculated
+in the public function. I ran out of time, so it does not have question marks 
+or asterisks.
+
+remove:
+    Remove has two cases. If the sequence is not in the trie, it returns not 
+found. Otherwise, it passes a node, its parent, and the sequence to find the 
+end of the word. Using recursion, once it finds the end, it deletes the node if
+it has no children, otherwise it changes the bool value. Also, this works for 
+question marks, but the return statement is off; I did not have time to fix it.
+Everything it outputs is true, it is just unneccessary. There are no asterisks.
+
+
+(3) Why do you think your solution is a good solution to this project? How are
+ space and time concerns addressed?
+
+ It is a good solution because tries shorten time of insert/search. To clear
+ space, when I removed a node, I had a function called post order delete destroy
+ the memory.
+
+
+
+(a) Names of individuals or sources you consulted for help.
+    
+    Individuals are listed at the top, and I used the Trie simulator online.
+
+(b) A description of each class you wrote.
+    
+    Described in overview.
+
+
+(c) What is the overall time complexity of the solution? 
+That is, how long does it take to make a query?
+
+    It takes the number of operations as the height of the closest match.
+
+
+(d) What is the overall space complexity of the solution?
+
+    The issue with a trie is that it creates a lot of NULL pointers.
+
+
+(e) How to compile/run your program.
+
+    Described in overview.
+
+
+(f) A description of how each piece of your code was tested.
+
+I tested each function of my trie in a testing.cpp file. In order to see what I 
+was doing, I would create cerr lines before every call of a function. I also 
+created a contains function to make sure a paticular word was in the trie, and 
+a print_trie function to print out all of the words to the trie. Both these 
+functions(in Trie.cpp) were called to check the Trie after other functions were
+called. For the big 3 functions, I would create test files with different edge
+cases.
+
+
+
+

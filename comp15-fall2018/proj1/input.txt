@@ -1,0 +1,11 @@
+i TACA
+i TA
+i TAG
+i CAT
+i CACA
+r TAG
+r CA?
+r C???
+q TA
+q TAC
+q TACAA
