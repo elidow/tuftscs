@@ -1,0 +1,59 @@
+HW3
+Eli Dow
+
+
+Acknowledgements: TAs Supriya, Casey, Ashley, and Eli
+
+
+Purpose: The purpose is to simulate checkout lines in a grocery store, and this 
+		 is implemented with a CheckoutQueue class. We are taking in shoppers
+		 waiting to check out and outputting data on how long it took.
+
+Files:
+
+Name: CheckoutQueue.h
+Description: CheckoutQueue.h contains declarations of all the CheckoutQueue
+			 functions and attibutes.
+
+Name: CheckoutQueue.cpp
+Description: CheckoutQueue.cpp contains all of the functions of CheckoutQueue,
+			 including the implemented funtions. It uses a LinkedList.
+
+Name: GrocerySim.h
+Description: GrocerySim.h contains declarations of all the GrocerySim functions
+			 and attibutes.
+
+Name: GrocerySim.cpp
+Description: GrocerySim.cpp contains all of the functions of GrocerySim,
+			 including the implemented funtions. It has a run function in which
+			 it simulates the entire grocery store until there are no shoppers.
+
+Name: testCheckoutQueue.cpp
+Description: This file is an alternative driver containing different testing
+			 functions used to make sure that the code works errors. Tests one
+			 part of the program at a time(unit-testing)
+
+
+How to compile and run your program:
+
+Compiled: make driver
+Run: ./driver NUM_STANDARD_LANES NUM_EXPRESS_LANES MAX_EXPRESS_ITEMS
+	 [INPUT_FILE]
+
+
+Data Structures and Algorithms
+
+	I used a LinkedList for this assignment. Using a LinkedList not only made it
+easy to insert shoppers at the back, but I did not have to worry about
+expanding or contracting. In the enqueue function, it was easy to insert
+in the back of the queue because one of the LinkedList's attributes was a 
+back pointer. Also, in the dequeue function, it was easy to check for
+run-time errors(head is null) and, otherwise, set the head to the next.
+
+
+Details and Explanation of Testing:
+	I tested my code by using the testaCheckoutQueue driver. In that file,
+I would output every function individually(sometimes in groups) to make sure it
+was working. In a lot of functions of CheckoutQueue, I had to make sure I was
+using LinkedList correctly. I also outputted in various parts of the run
+function of GrocerySim to find errors in helper/CheckoutQueue functions.
