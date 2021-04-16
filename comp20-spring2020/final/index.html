@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset= "utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href= "style.css" />
+	<style type="text/css">
+			#bannerimage {
+				max-height: 400px;
+				overflow: hidden;
+			}
+	</style>
+	<script src="jquery-3.4.1.js"></script>
+	<script language='javascript'>
+
+		$(document).ready(function () {
+				$("#motto").slideDown(1000);
+		});
+
+		$(document).ready(function () {
+				$("#bannerimage").slideDown(1000);
+		});
+			
+	</script>
+</head>
+
+
+<body bgcolor= "#ffffff"; >
+	<h1>Find My Dog</h1>
+	<h2 id="motto" style="display:none">Take our questionaire to find your what
+        dog breed is best for you!</h2>
+
+	<div class="navbar">
+	  <li><a class="active" href="#home">Home  <img src = "doghouse.png"></a></li>
+      <li><a href="questions.html">Find My Dog   <img src = "dog.png"></a></li>
+      <li><a href="contact.html">Contact    <img src = "paw.png"></a></li>
+	</div>
+
+	<div>
+		<img id="bannerimage" src = "dogwithgirl.jpg">
+	</div>
+
+
+
+	<footer class="footer-distributed">
+ 
+		<div class="footer-left">
+			<h3>Find My Dog</h3>
+	
+			<p class="footer-links">
+				<a href="index.html">Home</a>
+				|
+				<a href="questions.html">Find My Dog</a>
+				|
+				<a href="login.html">Contact</a>
+			</p>
+	
+			<p class="footer-company-name">© FindMyDog.com</p>
+		</div>
+	
+		<div class="footer-center">
+			<div>
+				<i class="fa fa-map-marker"></i>
+				  <p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+			</div>
+	
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>Phone Number: 617-FIN-DDOG</p>
+			</div>
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p>Email: findmydog@business.com</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<p class="footer-company-about">
+				We offer a free sercvice to find the dogs you want</p>
+			<div class="social-media">
+				Follow us on Facebook, Instagram, and Tik Tok!
+			</div>
+		</div>
+	</footer>
+
+
+
+</body>
+</html>

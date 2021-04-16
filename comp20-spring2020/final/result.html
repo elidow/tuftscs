@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Results</title>
+    <meta charset= "utf-8">
+    <link rel="stylesheet" type="text/css" href= "style.css" />
+    <script>
+        /**
+        * Get the value of a querystring
+        * @param  {String} field The field to get the value of
+        * @param  {String} url   The URL to get the value from (optional)
+        * @return {String}       The field value
+        */
+        var getQueryString = function (field, url) {
+            var href = url ? url : window.location.href;
+            var reg = new RegExp('[?&]' + field + '=([^&#]*)', 'i');
+            var string = reg.exec(href);
+            return string ? string[1] : null;
+        };
+
+        var dog_breed = getQueryString("dog", location.href)
+        //alert(dog_breed)
+
+
+
+
+
+        function getDogPic() {
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+            request = new XMLHttpRequest();
+            console.log("1 - request object created");
+
+            // Step 2: Set the URL for the AJAX request to be the JSON file
+
+            request.open("GET", "https://dog.ceo/api/breed/" + dog_breed +"/images", true);
+
+            console.log("2 - opened request file");
+
+            // Step 3: set up event handler/callback
+
+            request.onreadystatechange = function () {
+                console.log("3 - readystatechange event fired.");
+
+                if (request.readyState == 4 && request.status == 200) {
+
+                    // Step 5: wait for done + success
+
+                    result = request.responseText;
+                    //alert(result)
+                    document.getElementById("dogpic").src = result[0]
+                    document.getElementById("dogname").innerHTML = dog_breed
+		    //document.getElementById("dogdescript").innerHTML = dog_description
+
+                }
+                else if (request.readyState == 4 && request.status != 200) {
+
+                    document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
+
+                }
+
+                else if (request.readyState == 3) {
+
+                    document.getElementById("data").innerHTML = "Too soon!  Try again";
+
+                }
+
+            }
+            // Step 4: fire off the HTTP request
+            request.send();
+            console.log("4 - Request sent");
+        }
+		    
+    </script>
+
+    <script language='javascript'>
+        $(document).ready(function () {
+            $("#motto").slideDown(1000);
+        });
+
+        $(document).ready(function () {
+            $("#dogpic").slideDown(1000);
+        });
+    </script>
+</head>
+
+
+<body onload="getDogPic()">
+    <h1>Find My Dog</h1>
+	<h2 id="motto" style="display:none">Take our questionaire to find your what
+        dog breed is best for you!</h2>
+
+	<div class="navbar">
+	  <li><a class="active" href="#home">Home  <img src = "doghouse.png"></a></li>
+      <li><a href="questions.html">Find My Dog   <img src = "dog.png"></a></li>
+      <li><a href="contact.html">Contact    <img src = "paw.png"></a></li>
+	</div>
+
+
+    <h3>Dog Pic</h3>
+    <div id="data">Loading...</div>
+    <img id="dogpic" src="" alt="loading">
+    <div id="dogname">Loading</div>
+    <div id="dogdescript">Loading</div>
+
+    <footer class="footer-distributed">
+ 
+		<div class="footer-left">
+			<h3>Find My Dog</h3>
+	
+			<p class="footer-links">
+				<a href="index.html">Home</a>
+				|
+				<a href="questions.html">Find My Dog</a>
+				|
+				<a href="login.html">Contact</a>
+			</p>
+	
+			<p class="footer-company-name">© FindMyDog.com</p>
+		</div>
+	
+		<div class="footer-center">
+			<div>
+				<i class="fa fa-map-marker"></i>
+				  <p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+			</div>
+	
+			<div>
+				<i class="fa fa-phone"></i>
+				<p>Phone Number: 617-FIN-DDOG</p>
+			</div>
+			<div>
+				<i class="fa fa-envelope"></i>
+				<p>Email: findmydog@business.com</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<p class="footer-company-about">
+				We offer a free sercvice to find the dogs you want</p>
+			<div class="social-media">
+				Follow us on Facebook, Instagram, and Tik Tok!
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
