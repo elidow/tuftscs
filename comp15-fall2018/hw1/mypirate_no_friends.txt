@@ -1,0 +1,697 @@
+1 captain mansel alcantra: 
+2 john alexander: 
+3 algerine pirates: 
+4 ali basha: 
+5 captain alleston: 
+6 alwilda: 
+7 alexander ammand: 
+8 ibrahim ameer: 
+9 captain cornelius anderson: 
+10 captain androeas: 
+11 sultan of timor angora: 
+12 angria: 
+13 captain thomas anstis: 
+14 antonio: 
+15 john rose archer: 
+16 james austin: 
+17 captain john avery: 
+18 captain bridgeman: 
+19 captain aylett: 
+20 job baily: 
+21 captain baker: 
+22 roger ball: 
+23 john ballet: 
+24 captain baltizar: 
+25 captain bannister: 
+26 barbarosa: 
+27 redbeard: 
+28 captain nicholas barbe: 
+29 captain barnard: 
+30 captain barnes: 
+31 henry barnes: 
+32 james barrow: 
+33 captain charles bellamy: 
+34 james belvin: 
+35 francis beme: 
+36 vincent benavides: 
+37 george bendall: 
+38 william bennett: 
+39 philip bill: 
+40 bishop: 
+41 captain bishop: 
+42 william bishop: 
+43 blackbeard: 
+44 william blads: 
+45 benjamin blake: 
+46 james blake: 
+47 captain blewfield: 
+48 captain blot: 
+49 lieutenant boliviar: 
+50 bonavides: 
+51 captain bond: 
+52 bonnet: 
+53 anne bonny: 
+54 john boon: 
+55 samuel booth: 
+56 captain bourano: 
+57 captain oliver la bouse: 
+58 dowen: 
+59 captain john bowen: 
+60 william bowman: 
+61 robert boyd: 
+62 boyza: 
+63 captain joseph bradish: 
+64 george bradley: 
+65 captain hiram breakes: 
+66 john breck: 
+67 captain breh: 
+68 captain brenningham: 
+69 john brierly: 
+70 john bright: 
+71 james brinkley: 
+72 captain joseph brodley: 
+73 joseph brooks (senior): 
+74 joseph brooks (junior): 
+75 captain brown: 
+76 captain brown: 
+77 captain nicholas brown: 
+78 john brown: 
+79 captain james browne: 
+80 edward browne: 
+81 john browne (mamme): 
+82 surgeon richard browne: 
+83 eleazer buck: 
+84 captain buckenham: 
+85 captain dixey bull: 
+86 mr. bull: 
+87 surgeon bullocj: 
+88 charles bunce: 
+89 william burder: 
+90 captain samuel south burgess: 
+91 captain thomas burgess: 
+92 captain burk: 
+93 captain cachemaree: 
+94 caesar: 
+95 captain  caesar: 
+96 captain john calles (callis): 
+97 william cammock: 
+98 ralph candor: 
+99 cannis or cannis marcy: 
+100 signor caraccioli (d'aubigny): 
+101 thomas carman: 
+102 john carnes: 
+103 john carr: 
+104 dennis carter: 
+105 john carter: 
+106 castilio: 
+107 la cata: 
+108 henry chan: 
+109 edward cheesman: 
+110 daniel chevalle: 
+111 thomas child: 
+112 mistress ching: 
+113 captain christian: 
+114 daniel chuly: 
+115 charles church: 
+116 edward church: 
+117 william church: 
+118 john churchill: 
+119 jonathan clarke: 
+120 richard clarke (jafar): 
+121 robert clarke: 
+122 john clifford: 
+123 captain clinton: 
+124 captain cobham: 
+125 maria cobham: 
+126 captain thomas cocklyn: 
+127 captain cofrecina: 
+128 captain john cole: 
+129 samuel cole: 
+130 captain edward collier: 
+131 thomas collins: 
+132 adam comry: 
+133 captain condent: 
+134 captain cook: 
+135 george cook: 
+136 william cook: 
+137 captain john cooke: 
+138 captain cooper: 
+139 captain cooper: 
+140 captain corbet: 
+141 captain cornelius: 
+142 stephen james de cossey: 
+143 william coward: 
+144 captain c. cowley: 
+145 captain john cox: 
+146 captain john coxon: 
+147 captain richard coyle: 
+148 captain crackers: 
+149 captain john criss: 
+150 andrew cullen: 
+151 pierce cullen: 
+152 captain culliford: 
+153 george cumberland: 
+154 captain william chnningham: 
+155 patrick cunningham: 
+156 joseph curtice: 
+157 captain william dampier: 
+158 joseph dan: 
+159 captain daniel: 
+160 stephen daniel: 
+161 captain dansker: 
+162 john darby: 
+163 captain edward davis: 
+164 captain howel davis: 
+165 gabriel davis: 
+166 william davis: 
+167 corsair dawes: 
+168 robert dawes: 
+169 joseph dawson: 
+170 captain robert deal: 
+171 captain john deane: 
+172 le capitaine dedran: 
+173 richard deigle: 
+174 captain delander: 
+175 delizuff: 
+176 jonathan delve: 
+177 captain dempster: 
+178 henry dennis: 
+179 captain john derdrake: 
+180 captain george dew: 
+181 diabolito: 
+182 diego: 
+183 henry dipper: 
+184 francis dole: 
+185 john dorothy: 
+186 doctor thomas dover: 
+187 captain william dowling: 
+188 dragut: 
+189 sir francis drake: 
+190 peter dromyowe: 
+191 drummond: 
+192 nicholas dunbar: 
+193 george dunkin: 
+194 william dunn: 
+195 captain dunton: 
+196 captain easton: 
+197 captain peter easton: 
+198 edward eaton: 
+199 echlin: 
+200 william eddy: 
+201 captain england: 
+202 emanuel ernados: 
+203 adolf esmit: 
+204 captain cornelius essex: 
+205 domingo eucalla: 
+206 captain john evans: 
+207 captain jacob everson: 
+208 alexander olivier exquemelin: 
+209 john fall: 
+210 thomas farrington: 
+211 captain john fenn: 
+212 lewis ferdinando: 
+213 thomas fern: 
+214 william fernon: 
+215 captain james fife: 
+216 john fillmore: 
+217 john fitzerrald: 
+218 captain fleming: 
+219 john fletcher: 
+220 captain william fly: 
+221 william forrest: 
+222 edward forseith: 
+223 foster: 
+224 charles franklyn: 
+225 mathew freebarn: 
+226 william frogge: 
+227 anne fulworth: 
+228 garcia: 
+229 gardiner: 
+230 captain jose gaspar: 
+231 thomas gates: 
+232 francois gautier: 
+233 george gayny: 
+234 captain gennings: 
+235 thomas gerrard: 
+236 garrat gibbens: 
+237 charles gibbs: 
+238 paul giddens: 
+239 john giddings: 
+240 captain gilbert: 
+241 captain james gillam (kelly): 
+242 john gills: 
+243 harry glasby: 
+244 master godekins: 
+245 christopher goffe: 
+246 captain thomas goldsmith: 
+247 john gomez: 
+248 panther key john: 
+249 john goodale: 
+250 captain goodly: 
+251 captain nathaniel gordon: 
+252 cuthbert goss: 
+253 captain john gow: 
+254 le capitaine laurens de graff: 
+255 captain graham: 
+256 grambo: 
+257 sieur de grammont: 
+258 piere le grand: 
+259 roger grange: 
+260 captain herbert de graves: 
+261 captain red legs: 
+262 richard greensail: 
+263 henry greenville: 
+264 jack griffin: 
+265 john griffin: 
+266 richard griffin: 
+267 captain grogniet: 
+268 breti gullimillit: 
+269 juan gutterez: 
+270 richard hains: 
+271 captain john halsey: 
+272 captain john haman: 
+273 captain jean hamlin: 
+274 israel hands : 
+275 basilica hands: 
+276 captain hansel: 
+277 captain thomas harding: 
+278 richard hardy: 
+279 abraham harper: 
+280 captain harris: 
+281 hugh harris: 
+282 james harris: 
+283 peter harris: 
+284 richard harris: 
+285 captain harrison: 
+286 captain harvey: 
+287 william harvey: 
+288 john harwood: 
+289 captain hattsell: 
+290 captain hawkins: 
+291 sir john hawkins: 
+292 captain thomas hawkins: 
+293 thomas hawkins: 
+294 captain hayes : 
+295 bully hayes: 
+296 thomas hazel: 
+297 peter heaman: 
+298 peleg heath: 
+299 captain heidon: 
+300 captain henley: 
+301 captain herdue: 
+302 augustus hernandez: 
+303 david herriott: 
+304 william hewett: 
+305 daniel hide: 
+306 corporal john hill: 
+307 john hilliard: 
+308 dr. john hincher: 
+309 israel hind: 
+310 john hingson: 
+311 robert hitchens: 
+312 anthony holding: 
+313 captain holford: 
+314 captain richard holland: 
+315 mr. hopkins: 
+316 captain hore: 
+317 captain benjamin hornigold: 
+318 thomas how: 
+319 thomas howard: 
+320 thomas huggit: 
+321 captain edward hull: 
+322 andrew hunter: 
+323 john husk: 
+324 joseph hutnot: 
+325 captain george hutt: 
+326 gunner william ingram: 
+327 john ireland: 
+328 captain irvine: 
+329 captain jackman: 
+330 captain william jackson: 
+331 nathaniel jackson: 
+332 captain james: 
+333 charles james: 
+334 captain janquais: 
+335 benjamin jefferys: 
+336 jennings: 
+337 captain jennings: 
+338 richard jobson: 
+339 le capitaine jocard: 
+340 captain johnson: 
+341 captain ben johnson: 
+342 captain henry johnson: 
+343 isaac johnson: 
+344 jacob johnson: 
+345 john johnson: 
+346 marcus johnson: 
+347 robert johnson: 
+348 thomas johnston: 
+349 captain paul jones: 
+350 seaman jones: 
+351 thomas jones: 
+352 william jones: 
+353 william jones: 
+354 captain jonnia: 
+355 miguel jose: 
+356 randall judson: 
+357 kellwanton: 
+358 captain kennedy: 
+359 kheyr-ed-din: 
+360 captain william kidd: 
+361 james killing: 
+362 charles king: 
+363 francis king: 
+364 john king: 
+365 matthew king: 
+366 peter kneeves: 
+367 captain w. knight: 
+368 christopher knight: 
+369 captain knot: 
+370 koxinga: 
+371 kuo-hsing yeh: 
+372 abraham lacy: 
+373 captain john du laerquerac: 
+374 captain jean lafitte: 
+375 le captaine lagarde: 
+376 john lambert: 
+377 daniel lander: 
+378 captain michael landresson: 
+379 captain lane: 
+380 captain thomas larimore: 
+381 nicholas lawrence: 
+382 richard lawrence: 
+383 edward lawson: 
+384 l'escayer: 
+385 captain lessone: 
+386 sam levercott: 
+387 john levit: 
+388 james lewis: 
+389 nicholas lewis: 
+390 william lewis: 
+391 francis leyton: 
+392 manuel lima: 
+393 captain linch: 
+394 captain william ling: 
+395 thomas linisler: 
+396 captain lithgow: 
+397 william liver: 
+398 mrs. hon-cho lo: 
+399 thomas lodge: 
+400 zachariah long: 
+401 john lopez: 
+402 john lord: 
+403 captain edward low: 
+404 captain george lowther: 
+405 captain ludbury: 
+406 captain matthew luke: 
+407 captain lushingham: 
+408 lesieur raveneau de lussan: 
+409 daniel machauly: 
+410 edward mackdonald: 
+411 captain macket: 
+412 william mackintosh: 
+413 william magnes: 
+414 william main: 
+415 william main: 
+416 marquis de maintenon: 
+417 captain henry mainwaring: 
+418 captain antonio el majorcam: 
+419 jo mansfield: 
+420 captain edward mansfield: 
+421 captai david marteen: 
+422 captain john martel: 
+423 john martin: 
+424 captain john massey: 
+425 william may: 
+426 captain william maze: 
+427 captain dennis mccarthy: 
+428 hans van meghlyn: 
+429 de melton: 
+430 william melvin: 
+431 antonio mendoza: 
+432 meyeurus: 
+433 captaine michel: 
+434 le basque michel: 
+435 don miguel: 
+436 francesco miguel: 
+437 john miller: 
+438 thomas miller: 
+439 sieur du misnil: 
+440 captain misson: 
+441 captain mitchell: 
+442 john mitchell: 
+443 peter m'kinlie: 
+444 montbars (the exterminator): 
+445 montenegro: 
+446 francis de mont: 
+447 captain christopher moody: 
+448 gunner moore: 
+449 captain morgan: 
+450 colonel blodre morgan: 
+451 lieut.-colonel edward morgan: 
+452 lieut.-colonel thomas morgan: 
+453 sir henry moran: 
+454 humphrey morrice: 
+455 captain john morris: 
+456 captain thomas morris: 
+457 john morris: 
+458 captain morrison: 
+459 william morrison: 
+460 philip morton: 
+461 james mullet (millet): 
+462 darby mullins: 
+463 thomas mumper: 
+464 stephen mundon: 
+465 mustapha: 
+466 captain jean david nau: 
+467 neal: 
+468 william neff: 
+469 captain nelson: 
+470 thomas nicholls: 
+471 pedro nondre: 
+472 captain norman: 
+473 captain nathaniel north: 
+474 george norton: 
+475 john nutt: 
+476 ochali: 
+477 samuel odell: 
+478 thomas oughterlauney: 
+479 captain pain: 
+480 captain peter paine (le pain): 
+481 peter painter: 
+482 captain manuel rivero pardal: 
+483 captain william parker: 
+484 benjamin parkins: 
+485 james parrot: 
+486 neal patterson: 
+487 james pattison: 
+488 captain pease: 
+489 ignatius pell: 
+490 major penner: 
+491 benjamin perkins: 
+492 daniel perry: 
+493 captain peterson: 
+494 erasmus peterson: 
+495 john peterson: 
+496 captain petit: 
+497 william petty: 
+498 captain william phelipp: 
+499 captain phillips: 
+500 james philips: 
+501 john phillips: 
+502 joseph phillips: 
+503 william phillips: 
+504 richard phips: 
+505 captain charles pickering: 
+506 george pierse: 
+507 john pitman: 
+508 pedro poleas: 
+509 captain porter: 
+510 captain thomas pound: 
+511 thomas powell: 
+512 john power: 
+513 thomas price: 
+514 mathew primer: 
+515 captain lawrence prince: 
+516 captain pro: 
+517 captain lawrence prowse: 
+518 captain john pulling: 
+519 captain pursser: 
+520 captain john quelch: 
+521 john quittance: 
+522 captain john rackam: 
+523 rahman-ben-jabir: 
+524 captain raphaelina: 
+525 captain rayner: 
+526 william raynor: 
+527 captain read: 
+528 mary read: 
+529 robert read: 
+530 william read: 
+531 philip readhead: 
+532 captain john rhoade: 
+533 david rice: 
+534 owen rice: 
+535 lieutenant richards: 
+536 john richardson: 
+537 nicholas richardson: 
+538 john ridge: 
+539 basil ringrose: 
+540 peter roach: 
+541 alexander rob: 
+542 james robbins: 
+543 captain bartholomew roberts: 
+544 owen roberts: 
+545 edward robinson: 
+546 captain philip roche: 
+547 peter roderigo: 
+548 captain thomas rogers: 
+549 captain woodes rogers: 
+550 peter rollson: 
+551 george ross: 
+552 francis rossoe: 
+553 captain george roundsivel: 
+554 captain row: 
+555 ruiz: 
+556 sheik of rumps: 
+557 rupert, prince of the rhine: 
+558 captain le sage: 
+559 edward salter: 
+560 captain richard sample: 
+561 captain robert sample: 
+562 thomas sanders: 
+563 captain richard sawkins: 
+564 captain sawney: 
+565 francisco de sayas: 
+566 lewis scot: 
+567 roger scot: 
+568 william scott: 
+569 chritopher scudamore: 
+570 peter scudamore: 
+571 captain robert searles: 
+572 alexander selkirk: 
+573 henry shergall: 
+574 sir anthony shirley: 
+575 captain shivers: 
+576 william shutfield: 
+577 john siccadam: 
+578 henry simms : 
+579 gentleman harry: 
+580 captain skipton: 
+581 captain james skyrm: 
+582 george smith: 
+583 john smith: 
+584 john williams smith: 
+585 major samuel smith: 
+586 bernado de soto: 
+587 captain benito de soto: 
+588 joseph sound: 
+589 james sparks: 
+590 john sparkes: 
+591 robert spratlin: 
+592 captain francis farrington spriggs: 
+593 captain springer: 
+594 captain stanley: 
+595 captain stedman: 
+596 williams stephens: 
+597 john stephenson: 
+598 richard stiles: 
+599 thomas storey: 
+600 richard st. quintin: 
+601 captain sturges: 
+602 lord o'sullivan: 
+603 thomas sutton: 
+604 captain swan: 
+605 captain switzer: 
+606 david sympson: 
+607 captain taylor: 
+608 william taylor: 
+609 captain edward teach: 
+610 blackbeard: 
+611 robert teague: 
+612 john templeton: 
+613 captain thomas tew: 
+614 captain thomas: 
+615 john thomas: 
+616 captain thompson: 
+617 richard thurbar: 
+618 captain thurston: 
+619 captain joseph thwaites: 
+620 john tomkins: 
+621 dennis topping: 
+622 captain townley: 
+623 captain tristrian: 
+624 mathew tryer: 
+625 robert tucker: 
+626 captain tuvkerman: 
+627 captain richard turnley: 
+628 captain ort van tyle: 
+629 boatswain john upton: 
+630 uruj: 
+631 captain vallanueva: 
+632 captain moses vanclein: 
+633 captain charles vane: 
+634 captain nicholas vanhorn: 
+635 captain veale: 
+636 thomas veale: 
+637 captain verpre: 
+638 captain vigeron: 
+639 villa rise: 
+640 moses van vin: 
+641 henry virgin: 
+642 captain m.  la vivon: 
+643 lionel wafer: 
+644 captain thomas wake: 
+645 john walden : 
+646 miss nanney: 
+647 thomas wansley: 
+648 captain want: 
+649 ward: 
+650 captain ward: 
+651 william warren: 
+652 john waters: 
+653 john watkins: 
+654 captain john watling: 
+655 henry watson: 
+656 edward watts: 
+657 samuel watts: 
+658 william watts: 
+659 john way: 
+660 captain brigstock weaver: 
+661 lieutenant joseph wells: 
+662 richard west: 
+663 tee wetherley: 
+664 sir thomas whetstone: 
+665 captain thomas white: 
+666 james white: 
+667 robert white: 
+668 william white: 
+669 william whitting: 
+670 francis wife: 
+671 william wiles: 
+672 captain wilgress: 
+673 captain john williams: 
+674 captain morris williams: 
+675 captain paul williams: 
+676 david williams: 
+677 john williams: 
+678 lieutenant james williams: 
+679 william williams: 
+680 robert willis: 
+681 alexander wilson: 
+682 george wilson: 
+683 james wilson: 
+684 john wilson: 
+685 captain christopher winter: 
+686 john winter: 
+687 william winter : 
+688 mustapha: 
+689 winthrop: 
+690 captain francis witherborn: 
+691 captain william wollervy: 
+692 william wood: 
+693 captain worley: 
+694 daniel wormall: 
+695 captain yallahs: 
+696 captain yeates: 
+697 andrew zekerman: 
