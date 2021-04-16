@@ -1,0 +1,179 @@
+<div class="navbar">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="questionaire.html">Appointments</a></li>
+    <li><a href="prices.html">Prices</a></li>
+    <li><a href="im.html">Messaging</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="plumberpage.html">Plumbers</a></li>
+  </div>
+
+  <footer class="footer-distributed">
+ 
+    <div class="footer-left">
+        <h3>Plumber Chat</h3>
+
+        <p class="footer-links">
+            <a href="index.html">Home</a>
+            |
+            <a href="about.html">About</a>
+            |
+            <a href="login.html">Login</a>
+        </p>
+
+        <p class="footer-company-name">© 2020 Plumber Chat Company Inc.</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+              <p>Address: 288 Boston Ave,<br> &emsp;&emsp;&emsp;&emsp; Medford, MA, 02155</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>Phone Number: 617-PLM-CHAT</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p>Email: plumberchat@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            We offer top plumbing services on a highly efficient platform</p>
+        <div class="social-media">
+            Follow us on Linkedin!
+        </div>
+    </div>
+</footer>
+
+footer {
+	position: fixed;
+    bottom: 0;
+}
+ 
+@media (max-height:850px) {
+	footer { position: static; }
+	header { padding-top: 40px; }
+}
+ 
+ 
+.footer-distributed {
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 105%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+    margin-left: -10px;
+}
+ 
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+ 
+/* Footer left */
+ 
+.footer-distributed .footer-left{
+	width: 30%;
+}
+ 
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 40px 'Cookie', cursive;
+	margin: 0;
+}
+ 
+/* Footer links */
+ 
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+ 
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+ 
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+/* Footer Center */
+ 
+.footer-distributed .footer-center{
+    width: 35%;
+    margin-top: 30px;
+}
+ 
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+    margin: 10px 15px;
+	vertical-align: middle;
+}
+ 
+ 
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+    margin:0;
+
+} 
+ 
+/* Footer Right */
+ 
+.footer-distributed .footer-right{
+    width: 30%;
+    margin-top: 40px;
+}
+ 
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 0;
+}
+ 
+.footer-distributed .social-media{
+    margin-top: 25px;
+    color: #ffffff
+}
+ 
+/* For screen size adjustment */
+ 
+@media (max-width: 1000px) {
+ 
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+ 
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+ 
+}
