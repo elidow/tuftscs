@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+title {
+    font-size: 40px;
+    color: white;
+    white-space: pre;
+    align-self: left;
+}
+
+author {
+    font-size: 30px;
+    color: #777777;
+    align-self: left;
+}
+
+set_list {
+    background-color: #222222;
+}
+
+song {
+    white-space: pre;
+}
+
+name {
+    font-size: 25px;
+    color: white;
+}
+
+artist {
+    font-size: 20px;
+    color: gray;
+}
+
+genre {
+    font-size: 15px;
+    color: green;
+}
+
+year {
+    font-size: 15px;
+    color: red;
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+
+<set_list>
+    <title> Set List </title>
+    <author> by Eli Dow </author>
+	<song>
+		<name>I Want More</name>
+		<artist>KALEO</artist>
+		<genre>Alternative</genre>
+		<year>2020</year>
+	</song>
+	<song>
+		<name>Lonely Boy</name>
+		<artist>The Black Keys</artist>
+		<genre>Alternative</genre>
+		<year>2011</year>
+	</song>
+	<song>
+		<name>The Cave</name>
+		<artist>Mumford and Sons</artist>
+		<genre>Alternative</genre>
+		<year>2009</year>
+	</song>
+	<song>
+		<name>Renegades</name>
+		<artist>X Ambassadors</artist>
+		<genre>Alternative</genre>
+		<year>2015</year>
+	</song>
+	<song>
+		<name>Best of You</name>
+		<artist>Foo Fighters</artist>
+		<genre>Alternative</genre>
+		<year>2005</year>
+	</song>
+	<song>
+		<name>Some Nights</name>
+		<artist>fun</artist>
+		<genre>Alternative</genre>
+		<year>2012</year>
+	</song>
+	<song>
+		<name>Yellow</name>
+		<artist>Coldplay</artist>
+		<genre>Alternative</genre>
+		<year>2000</year>
+	</song>
+	<song>
+		<name>Do I Wanna Know?</name>
+		<artist>Arctic Monkeys</artist>
+		<genre>Alternative</genre>
+		<year>2013</year>
+	</song>
+	<song>
+		<name>Love Me</name>
+		<artist>The 1975</artist>
+		<genre>Alternative</genre>
+		<year>2016</year>
+	</song>
+	<song>
+		<name>Legend</name>
+		<artist>The Score</artist>
+		<genre>Alternative</genre>
+		<year>2017</year>
+	</song>
+</set_list>
