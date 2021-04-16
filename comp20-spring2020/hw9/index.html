@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SetList for Eli's Band</title>
+    <link rel="stylesheet" type="text/css" href= "style.css" />
+</head>
+
+<body bgcolor= "#cc99ff"; >
+    <h1>SetList for Eli's Band</h1>
+
+    <p id="stringify"></p>
+
+    <form>
+        <label for="genre">Genre:</label>
+        <select id="genre">
+          <option id="All" value="All Genres">All Genres</option>
+          <option id="Alt" value="Alternative">Alternative</option>
+          <option id="Cla" value="Classic Rock">Classic Rock</option>
+          <option id="Hip" value="Hip Hop">Hip Hop</option>
+          <option id="Pop" value="Pop">Pop</option>
+        </select>
+        <input type="button" value="Filter" onclick="read_genre()">
+    </form>
+
+    <h2>Songs</h2>
+
+    <p id="song1"></p>
+    <p id="song2"></p>
+    <p id="song3"></p>
+    <p id="song4"></p>
+    <p id="song5"></p>
+    <p id="song6"></p>
+    <p id="song7"></p>
+    <p id="song8"></p>
+    <p id="song9"></p>
+    <p id="song10"></p>
+
+    <script>
+
+        /* Part 1 */
+        var playlist = {
+            "name" : "hw7",
+            "songs": [{
+
+                "name" : "I Want More",
+                "artist" : ["KALEO"],
+                "genre" : ["Alternative"],
+                "year" : "2020"
+            },
+
+            {
+                "name" : "Lonely Boy",
+                "artist" : ["The Black Keys"],
+                "genre" : ["Alternative"],
+                "year" : "2011"
+            },
+
+            {
+                "name" : "Hotel California",
+                "artist" : ["Eagles"],
+                "genre" : ["Classic Rock"],
+                "year" : "1976"
+            },
+
+            {
+                "name" : "Stairway to Heaven",
+                "artist" : ["Led Zeppelin"],
+                "genre" : ["Classic Rock"],
+                "year" : "1971"
+            },
+
+            {
+                "name" : "Best of You",
+                "artist" : ["Foo Fighters"],
+                "genre" : ["Alternative"],
+                "year" : "2005"
+            },
+
+            {
+                "name" : "Right Round",
+                "artist" : ["Flo Rida"],
+                "genre" : ["Hip Hop", "Pop"],
+                "year" : "2009"
+            },
+
+            {
+                "name" : "Some Nights",
+                "artist" : ["fun"],
+                "genre" : ["Alternative"],
+                "year" : "2012"
+            },
+
+            {
+                "name" : "Yellow",
+                "artist" : ["Coldplay"],
+                "genre" : ["Alternative"],
+                "year" : "2000"
+            },
+
+            {
+                "name" : "Do I Wanna Know",
+                "artist" : ["Arctic Monkeys"],
+                "genre" : ["Alternative"],
+                "year" : "2013"
+            },
+
+            {
+                "name" : "Legend",
+                "artist" : ["The Score"],
+                "genre" : ["Alternative"],
+                "year" : "2017"
+            }
+
+            ]
+        }
+
+        /* Part 2 */
+        document.getElementById("stringify").innerHTML = "Serialized data: "
+                                + "<br>" + JSON.stringify(playlist);
+
+        /* Part 3 */
+        for(var i = 1; i < 11; i++) {
+            document.getElementById("song" + i).innerHTML =
+                "<b style='font-size:25px'>" + playlist.songs[i-1].name
+                + "</b><br>";
+            document.getElementById("song" + i).innerHTML += "Artist: ";
+            for(var j = 0; j < playlist.songs[i-1].artist.length; j++) {
+                document.getElementById("song" + i).innerHTML +=
+                    playlist.songs[i-1].artist[j];
+                if(j < playlist.songs[i-1].artist.length - 1)
+                    document.getElementById("song" + i).innerHTML += ", "
+                else
+                    document.getElementById("song" + i).innerHTML += "<br>"
+            }
+            document.getElementById("song" + i).innerHTML += "Genre: ";
+            for(var j = 0; j < playlist.songs[i-1].genre.length; j++) {
+                document.getElementById("song" + i).innerHTML +=
+                    playlist.songs[i-1].genre[j];
+                if(j < playlist.songs[i-1].genre.length - 1)
+                    document.getElementById("song" + i).innerHTML += ", "
+                else
+                    document.getElementById("song" + i).innerHTML += "<br>"
+            }
+            document.getElementById("song" + i).innerHTML += 
+                "Released " + playlist.songs[i-1].year + "<br>";
+            
+        }
+
+        /* Part 4 */
+        function read_genre()
+        {
+            var sel = document.getElementById("genre");
+            var opt;
+            var value = "";
+            for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+                opt = sel.options[i];
+                if ( opt.selected == true ) {
+                    value = opt.value;
+                    break;
+                }
+            }
+
+            var contains = false;
+            for(var i = 1; i < 11; i++) {
+                for(var j = 0; j < playlist.songs[i-1].genre.length; j++) {
+                    if(playlist.songs[i-1].genre[j] == value)
+                        contains = true;
+                }
+                if((!contains) && (value != "All Genres"))
+                    document.getElementById("song" + i).style.display = "none";
+                else
+                    document.getElementById("song" + i).style = "none";
+
+                contains = false;
+             }
+
+             opt.selected = true;
+        }
+
+    </script>
+</body>
+</html>
