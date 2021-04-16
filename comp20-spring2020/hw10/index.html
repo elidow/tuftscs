@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+	<title>TV MAZE API</title>
+    <meta charset="utf-8"/>
+    <style>
+        div {
+            margin-top: 10px;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+	<script>
+		function getShowName() {
+			/* Step 1: Make instance of request object...
+			...to make HTTP request after page is loaded*/
+			request = new XMLHttpRequest();
+			console.log("1 - request object created");
+ 
+			// Step 2: Set the URL for the AJAX request to be the JSON file
+ 
+			request.open("GET", "http://api.tvmaze.com/lookup/shows?tvrage=24493", true);
+
+			console.log("2 - opened request file");
+ 
+			// Step 3: set up event handler/callback
+
+			request.onreadystatechange = function() {
+				console.log("3 - readystatechange event fired.");
+                
+				if (request.readyState == 4 && request.status == 200) {
+
+					// Step 5: wait for done + success
+
+					result = request.responseText;
+					alert(result)
+					show = JSON.parse(result);
+
+                    document.getElementById("data").innerHTML = "Info about show:";
+					
+					document.getElementById("name").innerHTML = "Name of show: "
+                                                    + show["name"];
+                    document.getElementById("rating").innerHTML = "Rating: "
+                                                    + show["rating"]["average"]; 
+
+                    document.getElementById("summary").innerHTML = "Summary: "
+                                                    + show["summary"];
+                    document.getElementById("network").innerHTML = "Network: "
+                                                    + show["network"]["name"];                              
+					
+				}
+				else if (request.readyState == 4 && request.status != 200) {
+
+					document.getElementById("data").innerHTML = "Something is wrong!  Check the logs to see where this went off the rails";
+
+				}
+
+				else if (request.readyState == 3) {
+
+					document.getElementById("data").innerHTML = "Too soon!  Try again";
+
+				}
+
+			}
+		// Step 4: fire off the HTTP request
+			request.send();
+			console.log("4 - Request sent");
+		}
+	</script>
+</head>
+
+
+<body onload="getShowName()">
+
+    <h1 align="center">TV MAZE API</h1>
+
+    <div id="data">Info about show</div>
+
+    <div id="name">Loading...</div>
+    <div id="rating">Loading...</div>
+    <div id="summary">Loading...</div>
+    <div id="network">Loading...</div>
+
+    <br><br>
+    <p>
+        API Details:<br>
+        The API that I selected is called TV MAZE. TV MAZE is an API in which
+        you can access any TV information and add it to your website or app. It
+        provides a free, clean REST API that returns JSON so that you can access
+        information such as show names, genres, summaries, and much more.
+    </p>
+    <p>
+        Website Citation:<br>
+        I discovered this API by browsing a webpage on RapidAPI that listed 29
+        free APIs that returned information in JSON. I also looked it up the 
+        API itself on google to find more commands.
+        <br>
+        Link for RapidAPI: https://rapidapi.com/tvjan/api/tvmaze <br>
+        Link for TV MAZE: https://www.tvmaze.com/api#show-search
+    </p>
+    <p>
+        Options:<br>
+        I was given several options for the tv show. It gave basic information 
+        such as the title of the show, the genres, and the language. But it also 
+        gave information such as its network, its summary, its average rating on  
+        websites, and its airing time. I chose to output the name, the rating,  
+        the summary, and the network of one of my favorite shows, Game of Thrones 
+        (last season doesn't count).
+    </p>
+    <p>
+        Two Applications<br>
+        This API would be very useful in a streaming service like Netflix. 
+        The application could access details about a show so the user can 
+        determine if they want to watch it. Another API that would be super 
+        useful is one that lists times of shows such as TV Guide Mobile. They 
+        could use the same information as streaming services, and use details 
+        on top of that such as the status of the show (has it ended yet), what 
+        network it is on, and how long the air time is. TV MAZE is very useful! 
+        <br><br><br></p>
+
+</body>
+</html>
