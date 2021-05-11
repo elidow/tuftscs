@@ -1,1 +1,99 @@
+## COMP131 Assignment 3: Genetic Algorithm ##
+################# README ####################
+#### Eli Dow
 
+Description of the Problem: The Knapsack Problem
+
+You are going on a hiking trip, and there is a limit to the things you can 
+bring. You have two things: a backpack with a size (the weight it can hold that 
+is) and a set of boxes with different weights and different importance values. 
+The goal is to fill the backpack to make it as valuable as possible without 
+exceeding the maximum weight (250).
+
+Important Notes:
+
+Run main.py (all code is in there)
+
+When you run the simulation (entering 1), it purposely prints the initial 
+boxes and initial population of backpacks so you can see what it looks like.
+This takes about 30 seconds. Once you see "3, 2, 1, GO!", that's when the
+actual algorithm starts (takes .1 seconds).
+
+Definition of genetic algorithm:
+
+genome/genetic representation: The genetic representation describes the elements
+            of the genotype and how they are mapped into the phenotype. 
+            Initially, we have a set of boxes objects to chose from, called
+            original_set. Each backpack will be represented by a list of box 
+            objects/tuples. Each box object/tuple has a weight (int) and 
+            importance value (int). The phenotype for a backpack is a list of 
+            binary numbers (size is length of original_set). Each number 
+            represents a box in the original_set; a 1 means that that box is in 
+            the backpack and a 0 means it wasn't. It was helpful to store the 
+            list of boxes and the phenotype for different reasons, whether it 
+            had to do with design or functionality. In summary, each backpack
+            object has a list of box objects, a phenotype array of binary 
+            numbers, and a MAX_TOTAL_WEIGHT.
+
+initial population: As mentioned, we have a set of boxes objects original_set
+            to chose from. It will initially have 15 unique boxes in the
+            set. Each will have a weight between 5-25 and a value between 1-10. 
+            Initially, there will be 12 different backpacks, each with 10
+            random boxes from the set. There will always be 12 backpacks in 
+            the population each round. All of these numbers are defined at the 
+            top of main.py. population size must always be a multiple of 4 for 
+            culling and crossover to work
+
+fitness function: A fitness function associates each phenotype
+            with a numerical score. For this problem, the numerical score NS of
+            a backpack's sum of box's (5 * value - weight). The higher this
+            numerical score, the more fit the box is. We are optimizing
+            boxes with higher values and lower weights. 
+            A backpack with an overall weight of 250 automatically deducts
+            the fitness by 500 so it is pretty much impossible for a backpack 
+            that goes over the weight to be in the top 50%
+
+selection: This will be done by truncated rank-based selection (or Culling). 
+            50% of the best backpacks will generate offspring (in 
+            other words, the boxes with the top 50% highest fitness function 
+            scores), while the other 50% is eliminated. 6 boxes generate 
+            offspring while the other 6 are deleted.
+    
+reproduction: After coming up with the top 50%, each individual matches with 
+              another individual and they produce four offspring. Thus, the 
+              population returns to the size of 12 in the next generation 
+              because 3 pairs are making 4 children each (3 * 4 = 12)
+
+genetic operators: 
+        Recombination/Crossover: Given a pair of backpacks 
+            B and B2 (there are 3 total pairs), it will generate four offspring:
+            C1 will have B's first 3 boxes and B2's last 7 boxes, 
+            C2 will have B's first 6 boxes and B2's lat 4 boxes,
+            C3 will have B2's first 3 boxes and B's last 7 boxes, 
+            C4 will have B2's first 6 boxes and B's lat 4 boxes.
+            This is done with the crossover function that is given the two 
+            backpacks, the original set (to create the new phenotype), and 
+            a point for one-point crossover.
+        Mutation:
+            After crossover, we mutate each backpack. Since the crossover isn't 
+            perfect and includes repeats in the new phenotype, we need to mutate
+            so that the new backpack has 10 unique boxes. It uses probability 
+            to populate it with new unique backpacks.
+
+solution test/simulation:
+        Since it is difficult to get a perfect solution in a genetic algorithm,
+        I run the simulation for .1 seconds or until a perfect solution is 
+        found. The reason that I run it in that time is because my code always 
+        finds the most (close to the most) optimal solution in that time 
+        (much faster than .1 seconds). For each round, out of the backpacks in 
+        the new population, I store the one with the highest total value.
+        After the simulation, I print the solution backpack
+        the phenotype, total weight, and total value
+
+
+    
+
+    
+
+                        
+                      
