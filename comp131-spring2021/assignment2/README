@@ -1,1 +1,123 @@
+### COMP131 Assignment 2: Informed Search ###
+################# README ####################
+#### Eli Dow
+
+
+1) Searching problems are defined by five components: an initial state, 
+   a goal test, possible actions, successor functions, and a past cost funciton.
+
+    initial state: The initial state is a list that represents the initial stack
+                   of 10 differently sized pancakes. Each of the 10 
+                   pancakes/elements in the list is represented by a number in 
+                   the range 1-10, where a greater number represents a larger
+                   pancake. The list is in order from the bottom of the stack 
+                   to the top.
+
+    goal test: If the stack is in descending order, then we have reached our
+               goal of putting the pancakes in the correct order for the 
+               customer. The stack is in descending order when the largest 
+               pancake is on the bottom and each successor is smaller 
+               than the last so that the smallest pancake is on top. In other 
+               words, we have the stack [10, 9, 8, 7, 6, 5, 4, 3, 2, 1].
+
+    possible actions: We can insert the spatula at 9 different spots in the
+                      stack and flip all the pancakes above that point. The 
+                      point is either from the absolute bottom, so we flip the
+                      whole stack, or between any two elements that aren't the
+                      top two elements. We don't consider flipping between the 
+                      two top elements because flipping one pancake returns
+                      the same value.
+
+    successor function: The successor function describes the effect of each 
+                        action. In this case, our only possible action is our 
+                        flip function. Given an index of a stack (index), flip 
+                        reverses the elements from that index to the top of the 
+                        stack, then returns the resulting list
+    
+                Example: stack = [9, 5, 7, 3, 2, 4, 1, 10, 6, 8], index = 6
+                    flip(stack, index) returns [9, 5, 7, 3, 2, 4, 8, 6, 10, 1]
+
+    path cost function: This will be explained in the following section.
+
+
+
+    2) A path cost funciton assigns a numeric value to paths from the initial 
+       state. This is known as the backwards cost.
+    
+        path cost function:  The path cost function is the number of
+                        flips made so far. Since our only possible action is 
+                        to flip the pancakes at a specific spot, flipping has 
+                        a cost of just 1. The initial state has a backwards cost 
+                        of 0. There is no formal function that keeps track of 
+                        the backwards cost, but rather we keep track of this 
+                        in our algorithm function.
+
+                Example: a stack that is flipped three times as a backwards cost 
+                         of 3 (1 for every flip).
+
+    3) A heuristic funciton is a distance function that estimate the cost of the 
+       cheapest path from a state to a goal. It is known as the forward cost. 
+       
+        heuristic function: This heurisitc function is going to be based on the 
+                            gap heuristic function from the article "Landmark 
+                            Heuristics for the Pancake Problem" by Malte 
+                            Helmert. This function will be called 
+                            num_of_gaps(). num_of_gaps()
+                            returns the number of pancakes whose neighbor on top
+                            of it (to the right of it) is not the next smallest 
+                            pancake (values differ more than 1). It also adds 1 
+                            to a stack that doesn't have it's largest pancake on 
+                            the bottom of the stack. Our heuristic 
+                            function returns 0 when we are at the goal state,
+                            and the maximum value it can return is 10.
+                
+                Example: Given the stack [9, 8, 7, 2, 10, 6, 5, 4, 3, 1],
+                         num_of_gaps() returns 5 (7, 2, 10, 3 all 
+                         don't have the next smallest pancake on top of it and 
+                         10 is not on the bottom)
+
+    4) Implementation is in astar.py. Psuedocode is below (modified 
+       from lecture). Runtime is usually <3 seconds.
+    
+        Psuedocode
+        // a*
+            // initialize list, put it in queue
+            // while loop: simulation
+                // if queue is empty, return FAILURE 
+                // retrieve the front of the queue 
+                //     (min(forwards cost + backwards cost)
+                // if list == goal, return SUCCESS 
+                // for loop: try all possible flips 
+                    // if list is in queue (previous flip), don't put it in
+                    // if list is not on the queue, then put it in 
+
+    5) The Uniform-Cost Search algorithm could be used because it is still a
+       search problem that uses a priority queue based on a cost to determine 
+       the next node. In my implementation, it was identical to astar.py except
+       it does not require a heuristic funciton in the total cost, just the 
+       path cost function. Implementation is in ucs.py. Psuedocode is below
+       (modified from lecture).
+
+       Runtime: Since there is a limited number of pancakes, it will always 
+       reach SUCCESS or FAILURE. However, because the branch factor is 10, the 
+       algorithm is not as efficient and the runtime is much longer for 
+       special cases (several minutes).
+                
+        Psuedocode
+        // ucs
+            // initialize list, put it in queue
+            // while loop: simulation
+                // if queue is empty, return FAILURE 
+                // retrieve the front of the queue 
+                //     (min(backwards cost)
+                // if list == goal, return SUCCESS 
+                // for loop: try all possible flips 
+                    // if list is in queue (previous flip), don't put it in
+                    // if list is not on the queue, then put it in                                    
+    
+
+    
+
+                        
+                      
 
