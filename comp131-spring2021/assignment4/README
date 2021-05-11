@@ -1,1 +1,32 @@
+### COMP131 Assignment 4: Constraint Satisfaction Problem ###
+####################### README #############################
+#### Eli Dow
+####
+#### README for CSP problem
+
+How to Run/Test Problem:
+
+To run this program, just run main.py. For the first menu, enter 1 if you wish 
+to run the algorithm. For the second menu, here are the following options: 
+- enter 1 if you wish to solve the easy puzzle provided (less than 0.03 sec)
+- enter 2 if you wish to solve the evil puzzle provided 
+  (usually takes under 7 seconds)
+- enter 3 if you wish to enter your own puzzle (time depends)
+
+What it outputs:
+
+It should output the solution board and the time it takes to solve. This 
+program assumes that the initial board given has a possible sudoku solution.
+
+Answer to question:
+
+Conflict-directed Backjumping can be used. This program provides a version of 
+back-jumping with the use of a queue. Everytime we have to chose between more 
+than one option for a square, we add that to the queue. That way, if we added 
+the wrong number and run into a conflict down the line, we can go back to the 
+original point where we ran into the conflict, and try again.
+
+
+
+
 
