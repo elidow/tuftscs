@@ -1,1 +1,36 @@
+How Nueral Network is going to work
 
+There are 4 input neurons (two widths, two heights)
+
+There is one hidden layer (4 neurons)
+
+There are 3 output neurons (one for setosa, versicolor, virginica)
+
+Weights:
+    input/hidden layer weights: 4 by 4 list
+    hidden/output layer weights: 4 by 3 list
+    bias B:
+    range: usually -1 to 1
+
+Learning rate N is always 0.1
+
+Bias:
+    hidden layer: 4 element list
+    output layer: 3 element list
+    range: between -1 and 1 as well 
+
+Activation function: O(Pi) = 1 / (1 + e^(Pi))
+
+Error equation:
+    For output neurons:
+      Delta(Pi) = O(Pi) * (1 - O(Pi)) * (1 - O(Pi))
+    For hidden neurons:
+      Delta(Pi) = O(Pi) * (1 - O(Pi)) * 
+                      (summation of ((weight btwn hidden and output) * Output O(Pi)))
+ 
+New weights:
+    ALWAYS weight_ij means weight going from i to j
+
+    To output (including base)
+        Change in weight_ij = N * O(Pi) * Delta(Pj)
+        new_weight_ij = weight + (Change in weight_ij)
