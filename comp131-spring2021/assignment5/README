@@ -1,1 +1,65 @@
+Classes/Functions:
+
+Bird:
+
+default constructor
+
+getObject(): returns a string identifying it as a bird
+
+Aircraft:
+
+default constructor
+
+getObject(): returns a string identifying it as an aircraft
+
+Bayesian Class:
+
+default constructor with probabilities
+
+generate_likelihood(obj): generates likelihood for each object based on speed
+
+read_speeddata(data): reads data
+
+calcNewProbability(currP, data): calculates new probability based on curr
+                                 probability and data
+
+helper functions:
+ - probability based on likelihood speed
+ - classification probability
+ - transition between classes of objects
+ - fluctuation (EXTRA CREDIT)
+
+report_probability(prob): based on probability, reports which 
+
+
+Design Plan:
+
+Make Intro Menu: 
+- Would u like to calc/report with Bayesian Classifier?
+- How to pass in info and start Bayesian Classifier
+   data.txt:
+    - each object from each track is on a line (10 lines total)
+    - each number is a 0-200 (13 digits after decimal)
+    - each number seperated by commas, no space
+    - NaN means not able to pick up 
+
+   pdf.text:
+    - each line represents the set of y coordinates of line 
+    - first line is birds, second line is aircrafts
+    - each number starts at x = 0, then goes to x = 200 (up by 0.5)
+
+Write classes:
+- Bird and Aircraft: all
+- Bayesian: Constructor and function definitions/contracts
+
+Read Data in and seperate numbers and datapoints
+- Review file stuff (open)
+- Practice reading/storing and try to seperate single speeds (with comma)
+- Practice reading/storing and try to seperate diff objects (diff line)
+
+Functions for likelihood
+
+Functions for probability
+
+Function for reporting results
 
