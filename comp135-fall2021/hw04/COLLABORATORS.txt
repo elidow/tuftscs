@@ -1,0 +1,9 @@
+Name: Eli Dow
+I spent 6 hours on this homework:
+    2 hours on #1 code
+    1 hour on #2-4 code
+    1 hour on #5 code
+    2 hours on all explanations
+I did not use any outside resources for this project.
+I sought help from my classmates Emil Polakiewic.
+With Emil, we talked about the difference between LBFGS and SGD.

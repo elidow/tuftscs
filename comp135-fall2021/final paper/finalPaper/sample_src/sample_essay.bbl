@@ -1,0 +1,67 @@
+\begin{thebibliography}{10}
+
+\bibitem{Dreyfus90}
+Stuart~E. Dreyfus.
+\newblock Artificial neural networks, back propagation, and the
+  {K}elley-{B}ryson gradient procedure.
+\newblock {\em Journal of Guidance Control Dynamics}, 13:926--928, September
+  1990.
+
+\bibitem{Erhan09}
+Dumitru Erhan, Yoshua Bengio, Aaron Courville, and Pascal Vincent.
+\newblock Visualizing higher-layer features of a deep network.
+\newblock Technical report, Universit\'{e} de Montr\'{e}al, 2009.
+
+\bibitem{Goodfellow16}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, Boston, MA, 2016.
+
+\bibitem{Hinton06}
+G.~E. Hinton, S.~Osindero, and Y.~Teh.
+\newblock A fast learning algorithm for deep belief nets.
+\newblock {\em Neural Computation}, 18:1527--1554, 2006.
+
+\bibitem{LeCun98}
+Yann LeCun, L\'{e}on Bottou, Yoshua Bengio, and Patrick Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock In {\em Proceedings of the {IEEE}}, volume~11, pages 2278--2324,
+  1986.
+
+\bibitem{Lewis88}
+J.~P. Lewis.
+\newblock Creation by refinement: A creativity paradigm for gradient descent
+  learning networks.
+\newblock In {\em Proceedings of the {IEEE} International Conference on Neural
+  Networks}, volume~2, pages 229--233, San Diego, CA, 1988.
+
+\bibitem{mahendran15}
+Aravindh Mahendran and Andrea Vedaldi.
+\newblock Understanding deep image representations by inverting them.
+\newblock In {\em Proceedings of the {IEEE} Conference on Computer Vision and
+  Pattern Recognition}, pages 5188--5196, Boston, MA, 2015.
+
+\bibitem{deepdreamsite}
+Alexander Mordvintsev, Christopher Olah, and Mike Tyka.
+\newblock Inceptionism: Going deeper into neural networks.
+\newblock \url{http://tinyurl.com/yam7yobs}, 2015.
+\newblock Originally published as a Google Research Blog post. Last retrieved
+  from Internet Archive: 05 December 2017.
+
+\bibitem{Olah17}
+Chris Olah, Alexander Mordvintsev, and Ludwig Schubert.
+\newblock Feature visualization: How neural networks build up their
+  understanding of images.
+\newblock {\em Distill}, 2017.
+
+\bibitem{Rumelhart86}
+David~E. Rumelhart, Geoffrey~E. Hinton, and Ronald~J. Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature}, 323:533--536, 1986.
+
+\bibitem{RussellNorvig10}
+Stuart Russell and Peter Norvig.
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall, Upper Saddle River, NJ, 3rd edition, 2010.
+
+\end{thebibliography}

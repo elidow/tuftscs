@@ -1,0 +1,368 @@
+% 	Notation file for logic papers.
+% 	Contains optional declaration and format commands.
+%	Authour:	Martin W. Allen
+%	Last modified:  Thursday, 05 February 2004
+% -----------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{notation}[05/02/04:  Various logic and math notation]
+%
+%	Loads AMS and symbol files
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{latexsym}
+\RequirePackage{amscd}
+\RequirePackage{amsxtra}
+\RequirePackage[mathscr]{eucal}
+%\RequirePackage{textcomp}  // this causes lots of mktexpk problems (to be fixed)
+
+
+%	Proclamations
+%	Bold title, italic text
+\theoremstyle{plain}
+%	No proclamations take this style
+
+%	Bold title, plain text
+%	All numbered, consecutively throughout
+%
+\theoremstyle{definition}
+%
+%	Main theorem is unnumbered
+%
+\newtheorem*{main}{Main Theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{fact}{Fact}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{claim}{Claim}
+
+%	Unemphasized style
+%
+\theoremstyle{remark}
+\newtheorem{notation}{Notation}
+
+
+
+
+%	Extra new commands
+%
+%
+%	DOUBLE turnstile:
+\newcommand{\entls}{\ensuremath{\vDash}}
+%
+%	NEGATED  DOUBLE turnstile:
+\newcommand{\nentls}{\ensuremath{\not \vDash}}
+%
+%	Subscripted (by argument) DOUBLE turnstile:
+\newcommand{\argentls}[1]{\ensuremath%
+{\vDash_{{}_{{}_{\negthickspace%
+\negthickspace\negthickspace #1}}}}}
+%
+%	NEGATED Subscripted  DOUBLE turnstile:
+\newcommand{\argnentls}[1]{\ensuremath%
+{\not \vDash{{}_{{}_{\text{\tiny\negthickspace%
+\negthickspace\negthickspace #1}}}}}}
+%
+%	Subscripted (by \varphi) DOUBLE turnstile:
+\newcommand{\phientls}{\ensuremath%
+{\vDash_\varphi}}
+%
+%	NEGATED Subscripted  (by \varphi) DOUBLE turnstile:
+\newcommand{\phinentls}{\ensuremath%
+{\not \vDash_\varphi}}
+%
+%
+%       SINGLE turnstile:
+\newcommand{\proves}{\ensuremath{\vdash}}
+%
+%
+%       NEGATED SINGLE turnstile:
+\newcommand{\nproves}{\ensuremath{\not \vdash}}
+%
+%	Subscripted (by \varphi) SINGLE turnstile:
+\newcommand{\phiproves}{\ensuremath%
+{\vdash_\varphi}}
+%
+%	NEGATED Subscripted  (by \varphi) SINGLE turnstile:
+\newcommand{\phinproves}{\ensuremath%
+{\not \vdash_\varphi}}
+%
+%	Subscripted (by argument) SINGLE turnstile:
+\newcommand{\argproves}[1]{\ensuremath
+{\vdash_{\text{\tiny%
+\negthickspace\negthickspace #1}}}}
+%
+%	Consequence set of {argument1}:
+\newcommand{\conset}[1]{\ensuremath%
+{\text{\textbf{Cn}}_{%
+\vDash_{{}_{{}_{\negthickspace%
+\negthickspace\negmedspace \varphi}}}}(#1)}}
+%
+%%
+%	Phi-preserving-consequence set of {argument1}:
+\newcommand{\phiconset}[1]{\ensuremath%
+{\text{\textbf{Cn}}^{\vDash}_{\varphi}(#1)}}
+%
+%
+%
+%	[Argument1]-consequence set of {argument2}:
+\newcommand{\argconset}[2]{\ensuremath%
+{\textbf{Cn}^{\vDash}_{#1}(#2)}}
+%
+%
+%       X-level of {argument1}
+\newcommand{\xlevel}[1]{\ensuremath%
+{\ell^{\vDash}_X(#1)}}
+%
+%
+%
+%       phi-level of {argument1}
+\newcommand{\philevel}[1]{\ensuremath%
+{\ell^{\vDash}_{\varphi}(#1)}}
+%
+%       [Argument1]-level of {argument1}
+\newcommand{\arglevel}[2]{\ensuremath%
+{\ell^{\vDash}_{#1}(#2)}}
+%
+%
+%	Set of all max-phi extensions of {argument1}:
+\newcommand{\maxset}[1]{\ensuremath%
+{[\mspace{-3mu}[ #1 ]\mspace{-3mu}]^{*}_{\varphi}}}
+%
+%
+%	Equality sign with 'df' subscript
+\newcommand{\eqdf}{\ensuremath%
+{\mathbin{=_{ _{\!\text{\tiny{df}}}}}}}
+%
+%
+%	Equality sign with colon (for definitions)
+\newcommand{\coleq}{\ensuremath%
+{\mathbin{:=}}}
+%
+%	The forcing turnstile
+\newcommand{\force}{\ensuremath{%
+	\mathbin{\raisebox{.25ex}{[} \!\! \vdash }}}
+%
+%	The NEGATED forcing turnstile
+\newcommand{\nforce}{\ensuremath{%
+	\mathbin{\raisebox{.25ex}{[} \!\! \nvdash }}}
+%
+%	The yielding turnstile
+\newcommand{\yield}{\ensuremath{%
+	\mathbin{ | \mspace{-3.5mu} \triangleright }}}
+%
+%	The 'such that' bar for set notation
+\newcommand{\suth}{\ensuremath{ \,|\, }}
+
+% A command for 'set containing XX' := {XX}
+\newcommand{\set}[1]%
+	{\ensuremath{ \{ #1 \} }}
+	
+% A command for 'sequence containing XX' := <XX>
+\newcommand{\seq}[1]%
+	{\ensuremath{\langle #1 \rangle}}
+	
+% a command for the set of natural numbers, N
+\newcommand{\nat}%
+	{\ensuremath{\mathbb{N}}}
+
+% a command for the set of integers, Z
+\newcommand{\zed}%
+	{\ensuremath{\mathbb{Z}}}
+
+% a command for the set of positive integers, Z^+
+\newcommand{\zedplus}%
+	{\ensuremath{\mathbb{Z}^+}}
+
+% a command for the set of negative integers, Z^-
+\newcommand{\zedminus}%
+	{\ensuremath{\mathbb{Z}^-}}
+
+% a command for the set of non-negative integers, Z^+ \cup \set{0}
+\newcommand{\zednon}%
+	{\ensuremath{\mathbb{Z}^{non-neg}}}
+
+% a command for complements, with overbars
+\newcommand{\comp}[1]%
+	{\ensuremath{\overline{#1}}}
+	
+% a command for inverses of functions (-1)
+\newcommand{\inv}%
+	{\ensuremath{^{-1}}}
+
+% A command for primes (')
+\newcommand{\prm}%
+	{\ensuremath{^{\prime}}}
+		
+% a command for double primes ('')
+\newcommand{\pprm}%
+	{\ensuremath{^{\prime \prime}}}
+
+% A command for the Kleene star
+\newcommand{\str}%
+	{\ensuremath{^{\star}}}
+
+% a command for the double star
+\newcommand{\sstr}%
+	{\ensuremath{^{\star\star}}}
+
+
+% a command for transpose
+\newcommand{\trn}%
+	{\ensuremath{^{T}}}
+	
+% a command for the 'language-of(XX)'
+\newcommand{\lng}[1]%
+	{\ensuremath{\mathcal{L}(#1)}}
+
+% A command for   'cardinality-of-XX' := |XX|
+\newcommand{\card}[1]%
+	{\ensuremath{\left| #1 \right|}}
+
+% a command for 'absolute value of XX' := ||XX||
+\newcommand{\abso}[1]%
+	{\ensuremath{\left\| #1 \right\|}}
+
+% a command for bounded sequence XX, YY, ..., ZZ
+\newcommand{\upton}[3]%
+	{\ensuremath{#1,\, #2,\, \ldots ,\, #3}} 
+
+% a command for bounded sequence XX_i, XX_j, ..., XX_k
+\newcommand{\uptonn}[4]%
+	{\ensuremath{#1_{#2},\, #1_{#3},\, \ldots ,\, #1_{#4}}}
+	
+% a command for unbounded sequence XX, YY, ZZ...
+\newcommand{\uptoinf}[3]%
+	{\ensuremath{#1,\, #2,\, #3,\, \ldots}} 
+
+% a command for unbounded sequence XX_i, XX_j, XX_k...
+\newcommand{\uptoinff}[4]%
+	{\ensuremath{#1_{#2},\, #1_{#3},\, #1_{#4},\, \ldots}} 
+
+% ceiling function
+\newcommand{\ceiling}[1]%
+	{\ensuremath{\lceil #1 \rceil}}
+
+% floor function 
+\newcommand{\floor}[1]%
+        {\ensuremath{\lfloor #1 \rfloor}}
+% choose function
+\newcommand{\chuse}[2]%
+	{\ensuremath{\binom{#1}{#2}}}
+
+% exclusive or (XOR)
+\newcommand{\xor}{\ensuremath{\oplus}}
+
+% domain of a function operator
+\newcommand{\dom}[1]{\ensuremath{\text{dom}(#1)}}
+
+% doubled square-brackets
+\newcommand{\dbrac}[1]{\ensuremath%
+  {[\mspace{-3mu}[ #1 ]\mspace{-3mu}]}}
+
+
+% the big-O ``order of'' notation
+\newcommand{\bigo}[1]{\ensuremath%
+  {\text{O}(#1)}}
+
+% a sequence of p thingies
+\newcommand{\pseq}[1]%
+  {\ensuremath{#1_{1},\, #1_{2},\, \ldots,\, #1_{p}}}
+
+% a sequence of n thingies
+\newcommand{\nseq}[1]%
+  {\ensuremath{#1_{1},\, #1_{2},\, \ldots,\, #1_{n}}}
+
+
+% degree of a node in a graph
+\newcommand{\dg}[1]%
+  {\ensuremath{\text{deg}(#1)}}
+
+
+% a labelled point in a graph (for use with graphs.sty only)
+\newcommand{\gpt}[3]{%
+  \roundnode{#1}(#2)
+  \autonodetext{#1}[#3]{\small \emph{#1}}}
+
+
+% a labelled point in a graph, with extra label (for use with graphs.sty only)
+\newcommand{\gptp}[4]{%
+  \roundnode{#1}(#2)
+  \autonodetext{#1}[#3]{\small \emph{#4}}}
+
+% an 'invisible' (0 size) point in a graph (for use with graphs.sty only)
+\newcommand{\gipt}[2]{%
+  \roundnode{#1}(#2) [\graphnodesize{0}]}
+
+% a thicker (undir) edge in a graph (for use with graphs.sty only)
+\newcommand{\thedge}[2]{%
+  \edge{#1}{#2}[\graphlinewidth{.1}]}
+
+
+
+
+
+% a command for text bullets
+\newcommand{\bull}%
+	{\vspace{10pt}
+	\noindent
+	\textbullet \;}
+
+% a command for in-entry separator
+\newcommand{\sep}%
+	{
+	\noindent
+	\begin{center}
+		\rule{4in}{.5mm}
+	\end{center}
+        }
+
+% a space-filled black QED
+\newcommand{\myqed}{\hfill\ensuremath{\blacksquare}}%
+
+
+% a command for in-entry separator (without spacing before/after)
+\newcommand{\nsep}%
+	{\noindent
+	\begin{center}
+		\rule{4in}{.5mm}
+	\end{center}}
+
+% a command for question-numbers
+\newcommand{\qn}[1]%
+	{\noindent \textbf{[ #1 ]}\quad}
+	
+% extra-option question command
+\newcommand{\qnn}[2]%
+	{\noindent \textbf{[ #1 ]} (\emph{#2})\quad}
+
+
+% sets page header from this point on to my name, date given
+\newcommand{\phead}[1]{%
+  \pagestyle{myheadings}
+  \markboth{\scriptsize M. Allen (#1)}{\scriptsize M. Allen (#1)}
+  
+  \begin{flushright}
+    \emph{\textbf{#1.}}
+  \end{flushright}
+  }
+
+
+%       The 'depth' operator
+\newcommand{\dpt}[1]{\ensuremath{\text{\emph{dpt}}(#1)}}
+
+% end definitions with a black triangle
+\newcommand{\dfend}{\hfill \ensuremath{\blacksquare}}	
+
+%a centered tilde for use in urls, etc.
+\newcommand{\urltilde}{{\raise.17ex\hbox{$\scriptstyle\sim$}}}
+
+% reduce space in list environments
+\def\cutwspace{\setlength{\parskip}{0pt}\setlength{\itemsep}{3pt}}
+
+\endinput
+

@@ -1,0 +1,12 @@
+Name: Eli Dow
+I spent 20 hours on this problem:
+    4 hours on 1.1
+    3 hours on 1.2
+    4 hours on 1.3
+    3 hours on 1.4-1.6
+    6 hours on Write Up
+    
+I used all the sklearn web pages provided in the spec as resources (CountVectorizer() and TfidVectorizer()). In addition, I used other sklearn resources such as LogisticRegression(), GridSearchCV(), MLPClassifier(), and DecisionTreeClassifier(). For information on the nltk module, I consulted https://www.nltk.org/py-modindex.html. For information on contractions, I consulted https://www.grammar-monster.com/punctuation/apostrophes\_for\_contractions.html. For information on entropy vs. gini, I consulted https://quantdare.com/decision-trees-gini-vs-entropy/. For doing the heatmaps, I consulted https://seaborn.pydata.org/generated/seaborn.heatmap.html. These are all in the PDF. 
+
+I did not recieve any help from TAs. I discussed certain aspects of the project
+with my classmate Emil Polakiewicz, such as ideas for the third model and images for the model predictions.

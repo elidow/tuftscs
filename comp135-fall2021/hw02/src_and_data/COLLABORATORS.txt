@@ -1,0 +1,6 @@
+Name: Eli Dow
+I spent 10 hours on this problem (4 on problem 1, 5 on problem 2, and 1 on problem 3)
+I sought help from my classmates Emil Polakiewicz and Ananya Pavuluri.
+With Ananya, we talked about the code demo posted on canvas to understand it better. With Emil, we talked about how
+to find the training and testing errors in problem 2.
+

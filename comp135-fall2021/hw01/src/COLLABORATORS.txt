@@ -1,0 +1,8 @@
+COLLABORATORS.txt
+
+Name: Eli Dow
+I spent about 2.5 hours on this problem (1 hour to get use to numpy, and 1.5 hour to do the assignment)
+The only help I got from professors, TAs, or students was from Emil Polakiewicz (student) when we discussed the
+different cases for random_state
+The only online sources I consulted were the online tutorials for numpy that were provided in the spec.
+
