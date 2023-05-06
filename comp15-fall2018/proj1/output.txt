@@ -1,7 +1,0 @@
-TAG removed
-CAC not found
-CAT removed
-CACA removed
-Match found TA 100%
-Match found TACA 75%
-Match found TACA 80%
