@@ -1,1 +1,1 @@
-All homeworks/projects from Tufts CS courses during my undergrad
+All public homeworks/projects from Tufts CS courses during my undergrad
